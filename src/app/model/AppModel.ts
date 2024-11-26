@@ -5,26 +5,26 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 })
 export class AppModel {
 
-  @Prop(['idApp'])
-  private id: string;
+  @Prop(String)
+  readonly idApp: string;
 
-  @Prop(['funzioniAbilitate'])
-  private funzioniAbilitate: Array<number>;
+  @Prop([Number])
+  funzioniAbilitate: Array<number>;
   
-  @Prop(['abilTest'])
-  private abilTest: boolean;
+  @Prop(Boolean)
+  abilTest: boolean;
   
-  @Prop(['abilSvil'])
-  private abilSvil: boolean;
+  @Prop(Boolean)
+  abilSvil: boolean;
   
-  @Prop(['abilProd'])
-  private abilProd: boolean;
+  @Prop(Boolean)
+  abilProd: boolean;
   
   @Prop(['labels'])
-  private labels: Array<object>;
+  labels: Array<object>;
   
   @Prop(['colors'])
-  private colors: Array<string>;
+  colors: Array<string>;
 
   constructor(
     id: string,
@@ -35,7 +35,7 @@ export class AppModel {
     labels: Array<object>,
     colors: Array<string>,
     ){
-    this.id = id;
+    this.idApp = id;
     this.funzioniAbilitate = funzioniAbilitate;
     this.abilTest = abilTest;
     this.abilProd = abilProd;
@@ -44,7 +44,6 @@ export class AppModel {
     this.colors = colors;
     }
     
-
 }
 
 export const AppModelSchema = SchemaFactory.createForClass(AppModel)
