@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { AppModelProvider } from './app/model/AppModelRepository';
-import { AppModel, AppModelSchema } from './app/model/AppModel';
-import { AppModelController } from './app/AppModelController';
+import { AppModelProvider } from './app/model/appmodel.service';
+import { AppModel, AppModelSchema } from './app/model/appmodel.model';
+import { AppModelController } from './app/appmodel.controller';
 import { ConfigModule } from '@nestjs/config';
 
 
