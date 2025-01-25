@@ -8,7 +8,9 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/gymapp_db'),
+    MongooseModule.forRoot(
+      'mongodb+srv://raffaelecarrieridev:eScQIu87aB5DLwi2@cluster0.eyllm.mongodb.net/gymapp_db'
+    ),
     MongooseModule.forFeature(
       [
         {
