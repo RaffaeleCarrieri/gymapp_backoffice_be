@@ -2,8 +2,9 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppModelProvider } from './app/model/AppModelRepository';
 import { AppModel, AppModelSchema } from './app/model/AppModel';
-import { AppModelController } from './app/AppModelController';
+import { AppmodelController } from './app/appmodel.controller';
 import { ConfigModule } from '@nestjs/config';
+import { HeartbeatController } from "./app/heartbeat.controller";
 
 
 @Module({
@@ -24,7 +25,7 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true, // Rende le variabili disponibili in tutta l'app
     })
   ],
-  controllers: [AppModelController],
+  controllers: [AppmodelController,HeartbeatController],
   providers: [AppModelProvider],
   //exports:[AppModelProvider]
 

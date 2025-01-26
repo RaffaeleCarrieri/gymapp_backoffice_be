@@ -10,3 +10,4 @@ services:
     environment:
       MONGO_URI: mongodb://mongo-db:27017/gymapp_db
     network_mode: bridge
+

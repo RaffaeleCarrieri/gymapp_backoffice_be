@@ -4,7 +4,7 @@ import { AppListPageOutDto } from "./model/dto/applistpage.out.dto";
 import { AppModelInDto, AppModelOutDto } from "./model/dto/appmodel.dto";
 
 @Controller('backoffice/api/v1')
-export class AppModelController{
+export class AppmodelController {
   constructor(private appModelProvider: AppModelProvider) {}
 
   @Get('/init')
